@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Change to your own main package name. -->
-    <groupId>org.mineacademy</groupId>
+    <groupId>dev.sha256</groupId>
 
     <!-- Change to your plugin name, must be lower cased and match your end package name. -->
-    <artifactId>template</artifactId>
+    <artifactId>advancedwarps</artifactId>
 
     <!-- Change to your plugin's name. Can contain capital letters, but do NOT use spaces. -->
-    <name>Lynx</name>
+    <name>AdvancedWarps</name>
 
     <!-- Change to the appropriate plugin's version you have. -->
     <version>1.0.0</version>
@@ -24,7 +24,7 @@
         <author>SHA256_</author>
 
         <!-- Change to the full path where your main class extending SimplePlugin is. -->
-        <main.class>dev.sha256.template.Template</main.class>
+        <main.class>dev.sha256.advancedwarps.AdvancedWarps</main.class>
 
         <!-- Change to the Java version used when compiling.
 
@@ -41,7 +41,7 @@
 
         <!-- Change to the latest one from https://github.com/kangarko/Foundation/releases
              or change to "LATEST" if you downloaded Foundation to your disk. -->
-        <foundation.version>6.4.7</foundation.version>
+        <foundation.version>6.9.1</foundation.version>
 
         <!-- Leave on "com.github.kangarko" if you use Foundation from GitHub like most people,
              or change to "org.mineacademy" if you downloaded our library to your disk. -->

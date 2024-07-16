@@ -1,0 +1,84 @@
+# LoadData must be loaded with the button that opens the menu
+# Player Warps menu where it displays all warps of the player make sure you have {warp_name} in the title
+# So it shows the Warp name
+
+# LoadData can be Warps, Materials
+
+
+
+Player_Warps_Main_Menu:
+  Title: "Main Menu"
+  Size: "9 * 3"
+  Buttons:
+    Your_Warps:
+      Slot: "9 * 1 + 3"
+      Material: DIAMOND_BLOCK
+      Title: "Your Warps"
+      Lore:
+        - ""
+        - "Click here to view your warps"
+        - ""
+      Click:
+        Menu: Player_Warps_Menu
+        LoadData: "Warps"
+
+Player_Warps_Menu:
+  Title: "Your Warps"
+  Size: "9 * 3"
+  Info:
+    - "You can teleport to your warps by left clicking"
+    - "You can edit your warps by right clicking"
+  Buttons:
+    Warp:
+      Slot: "9 * 1 + 3"
+      # Default would be changed if player set a custom one
+      Material: DIAMOND_BLOCK
+      # Title variables will be replaced with warp name
+      Title: "{warp_name}"
+      Lore:
+        - ""
+        - "Click to edit this warp"
+        - ""
+      Click:
+        Menu: Player_Warps_Edit_Menu
+
+
+Player_Warps_Edit_Menu:
+  Title: "Edit Warp"
+  Size: "9 * 3"
+  Buttons:
+    Edit_Name:
+      Slot: "9 * 1 + 3"
+      Material: NAME_TAG
+      Title: "Change warp name"
+      Lore:
+        - ""
+        - "Click to edit this warp name"
+        - ""
+      Click:
+        TextPrompt: "Enter new warp name"
+    Edit_Block:
+      Slot: "9 * 1 + 3"
+      Material: DIAMOND_BLOCK
+      Title: "Change warp name"
+      Lore:
+        - ""
+        - "Click to edit this warp name"
+        - ""
+      Click:
+        Menu: Player_Warps_Edit_Block_Menu
+        LoadData: "Materials"
+    Edit_Cost:
+      Slot: "9 * 1 + 3"
+      Material: EMERALD
+      Title: "Change warp name"
+      Lore:
+        - ""
+        - "Click to edit this warp name"
+        - ""
+      Click:
+        IntPrompt:
+            Title: "Enter new cost"
+            Min: 0
+            Max: 1000
+            Data: "Warps"

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE xml>
-<project name="Lynx" default="Build">
+<project name="AdvancedWarps" default="Build">
 
     <!-- We use this file to compile your plugin to your plugins/ directory
          automatically and use the hot swap (also known as live debug) feature.
@@ -19,8 +19,9 @@
          You can simply duplicate the <jar>...</jar> section
          to compile your plugin to multiple servers. -->
 
+
     <target name="Build">
-        <jar jarfile="/Users/kangarko/Test Servers/1.18/plugins/${ant.project.name}.jar" basedir="./target/classes/"
+        <jar jarfile="/home/sha256/Documents/Test Server/plugins/${ant.project.name}.jar" basedir="./target/classes/"
              includes="**/*">
 
             <!-- IF you have Foundation on your disk, remove the <zipgroupfileset> line and uncomment the <fileset> one. Repeat for the other <jar> goal below.
@@ -30,7 +31,7 @@
                              includes="**/*${foundation.version}.jar"/>
             <!--<fileset dir="../Foundation/target/classes"/>-->
         </jar>
-        <jar jarfile="/Users/kangarko/Test Servers/1.8.8/plugins/${ant.project.name}.jar" basedir="./target/classes/"
+        <jar jarfile="/home/sha256/Documents/Test Server/plugins/${ant.project.name}.jar" basedir="./target/classes/"
              includes="**/*">
             <zipgroupfileset dir="${user.home}/.m2/repository/com/github/kangarko/Foundation/${foundation.version}/"
                              includes="**/*${foundation.version}.jar"/>
