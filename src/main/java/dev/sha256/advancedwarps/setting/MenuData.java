@@ -122,11 +122,6 @@ public class MenuData extends YamlConfig {
                 }
 
                 @Override
-                protected void onMenuClose(Player player, Inventory inventory) {
-                    selectedWarps.remove(player.getUniqueId());
-                }
-
-                @Override
                 public Menu newInstance() {
                     return toMenuWarp(parent, warps);
                 }
@@ -163,11 +158,6 @@ public class MenuData extends YamlConfig {
             @Override
             protected String[] getInfo() {
                 return Valid.isNullOrEmpty(info) ? null : Common.toArray(info);
-            }
-
-            @Override
-            protected void onMenuClose(Player player, Inventory inventory) {
-                selectedWarps.remove(player.getUniqueId());
             }
 
             @Override
